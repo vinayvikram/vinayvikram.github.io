@@ -10,7 +10,7 @@
   
   .educationTitle {
     width: 100%;
-    font-size: 30px;
+    font-size: 2.4em;
     font-weight: 500;
   }
   
@@ -40,11 +40,12 @@
 
   .course > h2 {
     margin: 0;
-    font-size: 20px;
+    font-size: 1.6em;
   }
   
   .subject {
     margin: 0 20px;
+    font-size: 1.2em;
   }
   .divider {
     display: flex;
@@ -80,13 +81,21 @@
   }
   
   .timeline {
-    font-size: 14px;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
+  
+  .timeline > span {
+    white-space: nowrap;
+  }
+  
   
   .address {
     margin: 0 20px;
     text-align: right;
-    font-size: 12px;
+    font-size: 1em;
     margin-top: -10px;
   }
   

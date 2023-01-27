@@ -9,13 +9,15 @@ const Education = () => {
         degree: "B.S.",
         subject: "Data Science",
         address: "IIT Madras, Tamil Nadu",
-        timeline: "Jan 2021 - present",
+        from: "Jan 2021",
+        to: "present",
         note: ""
     }, {
         degree: "B.Tech.",
         subject: "Computer Science",
         address: "IIIT Kalyani, West Bengal",
-        timeline: "May 2018 - Sep 2018",
+        from: "May 2018",
+        to: "Sep 2018",
         note: "Dropped"
     }]
     return (
@@ -34,7 +36,10 @@ const Education = () => {
                     </div>  
                     <div className={styles.subject}>{edu.subject}</div>
                     <div class={styles.divider} >
-                        <div className={styles.timeline}>{edu.timeline}</div>
+                        <div className={styles.timeline}>
+                            <span>{edu.from} -</span>
+                            <span>{edu.to}</span>
+                        </div>
                         <div class={styles.pointLeft}></div>
                         <div class={styles.line}></div>
                         <div className={styles.circle}></div>
