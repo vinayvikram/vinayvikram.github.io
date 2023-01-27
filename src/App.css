@@ -2,9 +2,18 @@
   flex: 1;
   background: linear-gradient(#6889FB, #ffffff);
   display: flex;
+  flex-direction: row;
+  overflow: auto;
+}
+
+.Home {
+  flex: 1;
+  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  order: 1;
+  min-height: 100%;
 }
 
 .profile-photo > img {
@@ -58,3 +67,97 @@
   gap: 20px;
   justify-content: center;
 }
+
+
+.Experience {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px;
+  order: 2;
+}
+
+.experience-title {
+  width: 100%;
+  text-align: right;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.point-top {
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid black;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  margin-left: -8px;
+}
+
+.experience-box {
+  width: 100%;
+  border-left: 3px dashed black;
+  padding: 20px 0;
+}
+
+.position {
+  margin: 0 20px;
+  font-size: 20px;
+}
+
+.divider {
+  display: flex;
+  width: 100%;
+}
+
+.diamond {
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-bottom: 10px solid black;
+  position: relative;
+  top: -8px;
+  left: -9px;
+}
+.diamond:after {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 8px;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-top: 10px solid black;
+}
+
+.line {
+  width: 100%;
+  margin-top: 8px;
+  background: black;
+  height: 3px;
+  position: relative;
+  left: -12px;
+}
+
+.point-right {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid black;
+  position: relative;
+  left: -12px;
+}
+
+.timeline {
+  font-size: 14px;
+}
+
+.address {
+  margin: 0 20px;
+  font-size: 12px;
+  margin-top: -10px;
+}
+
+
