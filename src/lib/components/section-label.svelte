@@ -13,7 +13,7 @@
 		font-size: 2rem;
 		color: white;
 		width: fit-content;
-		padding: 4px 8px;
+		padding: 8px 16px;
 		border-radius: 0 8px 8px 0;
 	}
 </style>

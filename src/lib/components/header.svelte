@@ -1,5 +1,5 @@
-<script>
-	let isMenuHidden = true;
+<script lang="ts">
+	let isMenuHidden: boolean = true;
 
 	const toggleMenu = () => {
 		isMenuHidden = !isMenuHidden;
