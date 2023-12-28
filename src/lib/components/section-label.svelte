@@ -2,12 +2,13 @@
 	export let label: String;
 </script>
 
-<div class="section-label">
+<h2 class="section-label">
 	{label}
-</div>
+</h2>
 
 <style>
 	.section-label {
+		all: unset;
 		background-color: #383862;
 		font-size: 2rem;
 		color: white;

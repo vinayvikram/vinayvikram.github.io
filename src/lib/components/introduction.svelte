@@ -2,7 +2,7 @@
 	import CustomButton from './custom-button.svelte';
 </script>
 
-<div class="intro">
+<section class="intro">
 	<p>Hi there !</p>
 	<br />
 	<p>
@@ -15,8 +15,8 @@
 		</span>
 	</p>
 	<br />
-	<CustomButton buttonText="Check Projects" />
-</div>
+	<CustomButton buttonText="Check projects" />
+</section>
 
 <style>
 	.intro {
