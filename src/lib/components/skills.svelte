@@ -6,31 +6,31 @@
 <section class="skills">
 	<ul>
 		<li>
-			<img src="/images/html-5.png" alt="typescript" />
+			<img src="/svg/html5.svg" alt="html" />
 			HTML5
 		</li>
 		<li>
-			<img src="/images/css-3.png" alt="typescript" />
+			<img src="/svg/css3.svg" alt="css" />
 			CSS3
 		</li>
 		<li>
-			<img src="/images/js.png" alt="typescript" />
+			<img src="/svg/javascript.svg" alt="javascript" />
 			Javascript
 		</li>
 		<li>
-			<img src="/images/typescript.png" alt="typescript" />
+			<img src="/svg/typescript.svg" alt="typescript" />
 			Typescript
 		</li>
 		<li>
-			<img src="/images/git.png" alt="typescript" />
+			<img src="/svg/git.svg" alt="git" />
 			Git
 		</li>
 		<li>
-			<img src="/images/react.png" alt="typescript" />
+			<img src="/svg/react.svg" alt="react" />
 			React
 		</li>
 		<li>
-			<img src="/images/svelte.png" alt="typescript" />
+			<img src="/svg/svelte.svg" alt="svelte" />
 			Svelte
 		</li>
 	</ul>
@@ -52,6 +52,7 @@
 		font-size: 1rem;
 		display: flex;
 		flex-direction: column;
+		gap: 0.5rem;
 		justify-content: center;
 		align-items: center;
 		width: 4rem;

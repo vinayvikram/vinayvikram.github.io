@@ -52,7 +52,7 @@
 
 <style>
 	.experience {
-		padding: 1rem;
+		padding: 1rem 1rem 3rem 1rem;
 		display: flex;
 		flex-direction: column;
 		gap: 0.2rem;
