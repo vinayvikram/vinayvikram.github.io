@@ -1,6 +1,6 @@
 <script lang="ts">
 	export let buttonText: string;
-	export let action: () => void;
+	export let action: () => void = () => {};
 	export let buttonType: 'button' | 'submit' | 'reset' = 'button';
 </script>
 

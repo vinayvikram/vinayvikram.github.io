@@ -1,11 +1,36 @@
-<script>
+<script lang="ts">
 	import CustomButton from './custom-button.svelte';
 	import SectionLabel from './section-label.svelte';
 	import { createForm } from 'felte';
 
+	let messageStatus: 'sending' | 'success' | 'failed' | null = null;
+
+	const postURL: string =
+		'https://script.google.com/macros/s/AKfycbx4RsH_SyPX4lnyCKIVw-ub9DsbNEcS6fkTfzOIYsfA3gBGU4RUI1btrETdVdbA1jEtIA/exec';
+
 	const { form } = createForm({
-		onSubmit: () => {
-			console.log('Submitted');
+		onSubmit: async (values) => {
+			messageStatus = 'sending';
+			try {
+				await fetch(postURL, {
+					method: 'POST',
+					body: JSON.stringify(values)
+				})
+					.then((res) => res.json())
+					.then((res) => {
+						if (res.status === 'success') {
+							messageStatus = 'success';
+						} else {
+							messageStatus = 'failed';
+						}
+					});
+			} catch (err) {
+				messageStatus = 'failed';
+			} finally {
+				if (messageStatus == 'sending') {
+					messageStatus = null;
+				}
+			}
 		}
 	});
 </script>
@@ -14,10 +39,10 @@
 <section class="contact-me">
 	<div>Feel free to drop any message.</div>
 	<form use:form>
-		<input type="text" placeholder="your name" />
-		<input type="email" placeholder="your email" />
-		<textarea placeholder="your message" rows="20" cols="20" />
-		<CustomButton buttonText="Send Message" action={() => {}} buttonType={'submit'} />
+		<input name="name" type="text" placeholder="your name" />
+		<input name="email" type="email" placeholder="your email" />
+		<textarea name="message" placeholder="your message" rows="20" cols="20" />
+		<CustomButton buttonText={'Send Message'} buttonType={'submit'} />
 	</form>
 </section>
 

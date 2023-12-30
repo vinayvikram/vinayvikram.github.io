@@ -42,8 +42,10 @@
 		</li>
 	</ul>
 	<button class="download-resume-button">
-		<i class="fa-solid fa-download"></i>
-		My Resume
+		<a href="/resume.pdf" download="Resume-Vinay-Vikram.pdf">
+			<i class="fa-solid fa-download"></i>
+			My Resume
+		</a>
 	</button>
 
 	<button class={`menu-button ${isMenuHidden ? 'rotate-back' : 'rotate'}`} on:click={toggleMenu}>
@@ -126,6 +128,10 @@
 		padding: 8px 16px;
 		cursor: pointer;
 		margin: 0 1.25rem;
+	}
+
+	.download-resume-button > a {
+		all: unset;
 	}
 
 	.download-resume-button:hover {
