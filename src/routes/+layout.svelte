@@ -1,10 +1,18 @@
-<script>
+<script lang="ts">
 	import '@fortawesome/fontawesome-free/css/all.min.css';
 	import Header from '$lib/components/header.svelte';
 	import Footer from '$lib/components/footer.svelte';
+	import { navigating } from '$app/stores';
+
+	let scrollContainer: HTMLDivElement;
+
+	// scroll to top on navaigation
+	$: if ($navigating && scrollContainer) {
+		scrollContainer.scrollTo(0, 0);
+	}
 </script>
 
-<div class="scroll-container">
+<div class="scroll-container" bind:this={scrollContainer}>
 	<Header />
 	<main>
 		<slot />
