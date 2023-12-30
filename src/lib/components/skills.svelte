@@ -1,6 +1,7 @@
 <script>
 	import SectionLabel from './section-label.svelte';
 	import CustomButton from './custom-button.svelte';
+	import { goto } from '$app/navigation';
 
 	const skills = [
 		{
@@ -54,7 +55,7 @@
 		{/each}
 	</ul>
 	<div>
-		<CustomButton buttonText="Connect with me." />
+		<CustomButton buttonText="Connect with me." action={() => goto('/contact-me')} />
 	</div>
 </section>
 

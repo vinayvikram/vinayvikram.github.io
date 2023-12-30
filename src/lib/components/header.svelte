@@ -101,15 +101,12 @@
 		padding: 1.25rem;
 	}
 
-	.nav-bar > li {
-		padding: 8px 16px;
-	}
-
 	.nav-bar a {
 		all: unset;
 		display: inline-block;
 		width: 100%;
 		cursor: pointer;
+		padding: 8px 16px;
 	}
 
 	.nav-bar > li:hover {

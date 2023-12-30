@@ -1,9 +1,11 @@
 <script>
-	import AboutMe from "$lib/components/about-me.svelte"
+	import AboutMe from '$lib/components/about-me.svelte';
+	import Skills from '$lib/components/skills.svelte';
 </script>
 
 <div class="about-me-container">
 	<AboutMe />
+	<Skills />
 </div>
 
 <style>
@@ -16,5 +18,4 @@
 			padding-top: 4rem;
 		}
 	}
-
 </style>

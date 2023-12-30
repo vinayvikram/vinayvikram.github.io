@@ -2,6 +2,7 @@
 	import CustomButton from './custom-button.svelte';
 	import SectionLabel from './section-label.svelte';
 	import { getFormattedRangeAndDuration } from '$lib';
+	import { goto } from '$app/navigation';
 
 	const experiences = [
 		{
@@ -72,7 +73,7 @@
 	{/each}
 	<br />
 	<div>
-		<CustomButton buttonText="Know more about me." />
+		<CustomButton buttonText="Know more about me." action={() => goto('/about-me')} />
 	</div>
 </section>
 

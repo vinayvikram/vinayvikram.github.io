@@ -1,4 +1,5 @@
 <script>
+	import { goto } from '$app/navigation';
 	import CustomButton from './custom-button.svelte';
 </script>
 
@@ -15,7 +16,7 @@
 		</span>
 	</p>
 	<br />
-	<CustomButton buttonText="Check my projects." />
+	<CustomButton buttonText="Check my projects." action={() => goto('/projects')} />
 </section>
 
 <style>

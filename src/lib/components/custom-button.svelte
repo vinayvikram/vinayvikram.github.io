@@ -1,8 +1,9 @@
 <script lang="ts">
 	export let buttonText: string;
+	export let action: () => void;
 </script>
 
-<button class="custom-button">
+<button on:click={action} class="custom-button">
 	{buttonText}
 </button>
 
