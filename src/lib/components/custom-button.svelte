@@ -10,7 +10,7 @@
 	.custom-button {
 		all: unset;
 		font-style: normal;
-		font-size: 2rem;
+		font-size: 1.5rem;
 		background-color: #f68e62;
 		padding: 8px 16px;
 		border-radius: 12px;

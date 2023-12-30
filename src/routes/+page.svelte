@@ -7,6 +7,3 @@
 <Introduction />
 <Experience />
 <Skills />
-
-<style>
-</style>

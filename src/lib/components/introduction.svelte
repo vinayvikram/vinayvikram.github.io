@@ -15,7 +15,7 @@
 		</span>
 	</p>
 	<br />
-	<CustomButton buttonText="Check projects" />
+	<CustomButton buttonText="Check my projects." />
 </section>
 
 <style>
