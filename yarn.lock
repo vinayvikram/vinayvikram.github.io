@@ -162,6 +162,18 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.56.0.tgz#ef20350fec605a7f7035a01764731b2de0f3782b"
   integrity sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==
 
+"@felte/common@1.1.8":
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/@felte/common/-/common-1.1.8.tgz#5cabf3ad996772c7952b9879f742ba1cfbc12917"
+  integrity sha512-VbEOfNLWfDx0SpCfeE+fNWDpvcntND4MFs7Lxd18RIjrZYH82D0wWe9th2oVF9QT5XzgBEdMF5NGIttcwU4sjg==
+
+"@felte/core@1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@felte/core/-/core-1.4.1.tgz#69ab012a42acf05826224c3aaa2ce2f28fd02d2e"
+  integrity sha512-dUzfzug5cK93kBjG0u9F3zDM781qCJP4QwYPOpJsXbydwVseDM5BXpDqvZUFhqJsd0x1GKftkX69+iWafyASjw==
+  dependencies:
+    "@felte/common" "1.1.8"
+
 "@fortawesome/fontawesome-free@^6.5.1":
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-6.5.1.tgz#55cc8410abf1003b726324661ce5b0d1c10de258"
@@ -905,6 +917,13 @@ fastq@^1.6.0:
   integrity sha512-ifCoaXsDrsdkWTtiNJX5uzHDsrck5TzfKKDcuFFTIrrc/BS076qgEIfoIy1VeZqViznfKiysPYTh/QeHtnIsYA==
   dependencies:
     reusify "^1.0.4"
+
+felte@^1.2.12:
+  version "1.2.12"
+  resolved "https://registry.yarnpkg.com/felte/-/felte-1.2.12.tgz#f10b44c92ad611dc66c6cfa4e4ead9e364ccfeab"
+  integrity sha512-llg9ywCgIso48NnO6jZUy8D9vWuKE90dfIFUZPLyNKqbH1WJ0brNU6C4DkdfXtpRKlzWWHvaQkgMIezKoWlzvA==
+  dependencies:
+    "@felte/core" "1.4.1"
 
 file-entry-cache@^6.0.1:
   version "6.0.1"

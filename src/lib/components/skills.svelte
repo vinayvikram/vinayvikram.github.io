@@ -48,7 +48,7 @@
 		{#each skills as skill}
 			<li>
 				<a href={skill.link} target="_blank">
-					<img src={skill.icon} alt={skill.name} />
+					<img src={skill.icon} alt={`${skill.name} icon`} />
 					{skill.name}
 				</a>
 			</li>

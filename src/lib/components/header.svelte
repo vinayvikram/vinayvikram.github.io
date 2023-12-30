@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import { navigating } from '$app/stores';
 
 	let isMenuHidden: boolean = true;
@@ -11,7 +12,8 @@
 </script>
 
 <header class={isMenuHidden ? 'menu-hidden' : 'menu-visible'}>
-	<h1 class="full-logo">Vinay Vikram</h1>
+	<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions-->
+	<h1 class="full-logo" on:click={() => goto('/')}>Vinay Vikram</h1>
 
 	<ul class="nav-bar">
 		<li>

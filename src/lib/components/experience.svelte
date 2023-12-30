@@ -65,10 +65,10 @@
 				{#each experience.contributions.slice(0, showLess[index] ? 1 : experience.contributions.length) as contribution}
 					<li>{contribution}</li>
 				{/each}
-				<button on:click={() => toggleShowLess(index)}
-					>{showLess[index] ? 'show more...' : 'show less'}</button
-				>
 			</ul>
+			<button on:click={() => toggleShowLess(index)}
+				>{showLess[index] ? 'show more...' : 'show less'}</button
+			>
 		</div>
 	{/each}
 	<br />
@@ -105,6 +105,7 @@
 		flex-direction: column;
 		gap: 0.2rem;
 		font-size: 1rem;
+		margin-bottom: 0;
 	}
 
 	.position {
@@ -130,6 +131,7 @@
 		width: fit-content;
 		font-style: italic;
 		font-weight: bold;
+		font-size: 1rem;
 	}
 
 	@media only screen and (min-width: 1024px) {

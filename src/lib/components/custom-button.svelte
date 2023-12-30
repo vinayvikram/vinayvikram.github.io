@@ -1,9 +1,10 @@
 <script lang="ts">
 	export let buttonText: string;
 	export let action: () => void;
+	export let buttonType: 'button' | 'submit' | 'reset' = 'button';
 </script>
 
-<button on:click={action} class="custom-button">
+<button on:click={action} class="custom-button" type={buttonType}>
 	{buttonText}
 </button>
 
@@ -17,5 +18,9 @@
 		border-radius: 12px;
 		width: fit-content;
 		cursor: pointer;
+	}
+
+	.custom-button:hover {
+		box-shadow: 2px 2px 1px #a1acce;
 	}
 </style>
