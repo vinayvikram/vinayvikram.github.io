@@ -65,7 +65,7 @@
 					<li>{contribution}</li>
 				{/each}
 				<button on:click={() => toggleShowLess(index)}
-					>{showLess[index] ? 'show more...' : 'show less...'}</button
+					>{showLess[index] ? 'show more...' : 'show less'}</button
 				>
 			</ul>
 		</div>
@@ -126,6 +126,8 @@
 		color: #383862;
 		cursor: pointer;
 		width: fit-content;
+		font-style: italic;
+		font-weight: bold;
 	}
 
 	@media only screen and (min-width: 1024px) {

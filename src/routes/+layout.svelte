@@ -17,6 +17,7 @@
 		width: 100%;
 		padding-top: 5rem;
 		height: calc(100% - 5rem);
+		overflow-x: hidden;
 		overflow-y: auto;
 	}
 

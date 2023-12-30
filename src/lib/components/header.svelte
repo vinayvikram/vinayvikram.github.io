@@ -1,9 +1,13 @@
 <script lang="ts">
+	import { navigating } from '$app/stores';
+
 	let isMenuHidden: boolean = true;
 
 	const toggleMenu = () => {
 		isMenuHidden = !isMenuHidden;
 	};
+
+	$: if ($navigating) isMenuHidden = true;
 </script>
 
 <header class={isMenuHidden ? 'menu-hidden' : 'menu-visible'}>
@@ -11,20 +15,28 @@
 
 	<ul class="nav-bar">
 		<li>
-			<i class="fa-solid fa-house"></i>
-			Home
+			<a href="/">
+				<i class="fa-solid fa-house"></i>
+				Home
+			</a>
 		</li>
 		<li>
-			<i class="fa-solid fa-user"></i>
-			About me
+			<a href="/about-me">
+				<i class="fa-solid fa-user"></i>
+				About me
+			</a>
 		</li>
 		<li>
-			<i class="fa-solid fa-briefcase"></i>
-			Projects
+			<a href="/projects">
+				<i class="fa-solid fa-briefcase"></i>
+				Projects
+			</a>
 		</li>
 		<li>
-			<i class="fa-solid fa-envelope"></i>
-			Contact me
+			<a href="/contact-me">
+				<i class="fa-solid fa-envelope"></i>
+				Contact me
+			</a>
 		</li>
 	</ul>
 	<button class="download-resume-button">
@@ -91,6 +103,12 @@
 
 	.nav-bar > li {
 		padding: 8px 16px;
+	}
+
+	.nav-bar a {
+		all: unset;
+		display: inline-block;
+		width: 100%;
 		cursor: pointer;
 	}
 
