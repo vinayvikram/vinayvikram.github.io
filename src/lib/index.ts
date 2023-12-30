@@ -24,3 +24,11 @@ export const getFormattedRangeAndDuration = (joining_date : string, leaving_date
 
     return `${formmattedRange} | ${formattedDuration}`;
 }
+
+
+export const getYearsOfExperience = () => {
+
+    const yoe = DateTime.now().diff(DateTime.fromISO("2022-01-01")).as('years')
+
+    return Math.floor(yoe); 
+}

@@ -1,5 +1,6 @@
 <script>
 	import { goto } from '$app/navigation';
+	import { getYearsOfExperience } from '$lib';
 	import CustomButton from './custom-button.svelte';
 </script>
 
@@ -8,7 +9,7 @@
 	<br />
 	<p>
 		<span>
-			I am a front-end developer with <br /> more than 2 years of experience.
+			I am a front-end developer with <br /> more than {getYearsOfExperience()} years of experience.
 		</span>
 		<br />
 		<span>

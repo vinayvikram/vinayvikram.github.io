@@ -104,6 +104,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 0.2rem;
+		font-size: 1rem;
 	}
 
 	.position {
@@ -134,6 +135,10 @@
 	@media only screen and (min-width: 1024px) {
 		.experience {
 			padding: 3rem 4rem;
+		}
+
+		.experience > div > ul {
+			font-size: 1.25rem;
 		}
 
 		.experience .location-and-duration {

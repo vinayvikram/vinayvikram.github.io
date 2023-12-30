@@ -1,4 +1,5 @@
 <script>
+	import { getYearsOfExperience } from '$lib';
 	import SectionLabel from '$lib/components/section-label.svelte';
 </script>
 
@@ -9,8 +10,8 @@
 		frontend developer in a service based company.
 	</p>
 	<p>
-		With more than 1 year of experience, I have had the opportunity to work on various interesting
-		features, which helped me to develop a strong skill set in React JS.
+		With more than {getYearsOfExperience()} years of experience, I have had the opportunity to work on
+		various interesting features, which helped me to develop a strong skill set in React JS.
 	</p>
 	<p>
 		I am constantly seeking to expand my knowledge and stay up-to-date with latest technology. I am
@@ -29,6 +30,7 @@
 <style>
 	.about-me {
 		padding: 3rem;
+		font-size: 1.25rem;
 	}
 
 	@media only screen and (min-width: 1024px) {
