@@ -2,9 +2,10 @@
 	export let buttonText: string;
 	export let action: () => void = () => {};
 	export let buttonType: 'button' | 'submit' | 'reset' = 'button';
+	export let disabled: boolean = false;
 </script>
 
-<button on:click={action} class="custom-button" type={buttonType}>
+<button on:click={action} class="custom-button" type={buttonType} {disabled}>
 	{buttonText}
 </button>
 
@@ -18,6 +19,10 @@
 		border-radius: 12px;
 		width: fit-content;
 		cursor: pointer;
+	}
+
+	.custom-button:disabled {
+		opacity: 0.8;
 	}
 
 	.custom-button:hover {

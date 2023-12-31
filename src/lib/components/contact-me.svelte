@@ -26,10 +26,6 @@
 					});
 			} catch (err) {
 				messageStatus = 'failed';
-			} finally {
-				if (messageStatus == 'sending') {
-					messageStatus = null;
-				}
 			}
 		}
 	});
@@ -37,13 +33,29 @@
 
 <SectionLabel label="Contact me" />
 <section class="contact-me">
-	<div>Feel free to drop any message.</div>
-	<form use:form>
-		<input name="name" type="text" placeholder="your name" />
-		<input name="email" type="email" placeholder="your email" />
-		<textarea name="message" placeholder="your message" rows="20" cols="20" />
-		<CustomButton buttonText={'Send Message'} buttonType={'submit'} />
-	</form>
+	{#if messageStatus == 'success'}
+		<div>Thank you !</div>
+		<div>I have received your message.</div>
+		<div>I will get back to you.</div>
+		<CustomButton
+			buttonText="Go Back"
+			action={() => {
+				messageStatus = null;
+			}}
+		/>
+	{:else}
+		<div>Feel free to drop any message.</div>
+		<form use:form>
+			<input name="name" type="text" placeholder="your name" />
+			<input name="email" type="email" placeholder="your email" />
+			<textarea name="message" placeholder="your message" rows="10" cols="10" />
+			<CustomButton
+				buttonText={messageStatus === 'sending' ? 'Sending..' : 'Send Message'}
+				buttonType={'submit'}
+				disabled={messageStatus === 'sending'}
+			/>
+		</form>
+	{/if}
 </section>
 
 <style>
@@ -78,11 +90,11 @@
 		}
 
 		.contact-me input {
-			width: 50%;
+			width: 40%;
 		}
 
 		.contact-me textarea {
-			width: 80%;
+			width: 60%;
 		}
 	}
 </style>
