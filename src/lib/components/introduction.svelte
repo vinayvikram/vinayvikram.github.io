@@ -22,7 +22,6 @@
 
 <style>
 	.intro {
-		min-height: 100%;
 		padding: 3rem;
 	}
 	.intro:first-child {

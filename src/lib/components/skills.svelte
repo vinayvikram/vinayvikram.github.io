@@ -38,6 +38,16 @@
 			name: 'Svelte',
 			icon: '/svg/svelte.svg',
 			link: 'https://svelte.dev/'
+		},
+		{
+			name: 'Graphql',
+			icon: '/svg/graphql.svg',
+			link: 'https://graphql.org/'
+		},
+		{
+			name: 'Jest',
+			icon: '/svg/jest.svg',
+			link: 'https://jestjs.io/'
 		}
 	];
 </script>

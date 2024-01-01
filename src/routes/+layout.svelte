@@ -27,9 +27,12 @@
 		height: calc(100% - 5rem);
 		overflow-x: hidden;
 		overflow-y: auto;
+		display: flex;
+		flex-direction: column;
 	}
 
 	main {
+		flex: 1;
 		background: linear-gradient(#f5f4f2, #a1acce);
 		background-repeat: no-repeat;
 		background-attachment: fixed;
