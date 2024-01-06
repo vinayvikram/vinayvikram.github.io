@@ -48,7 +48,11 @@
 		</a>
 	</button>
 
-	<button class={`menu-button ${isMenuHidden ? 'rotate-back' : 'rotate'}`} on:click={toggleMenu}>
+	<button
+		class={`menu-button ${isMenuHidden ? 'rotate-back' : 'rotate'}`}
+		on:click={toggleMenu}
+		aria-label="menu"
+	>
 		<i class="fa-solid fa-bars"></i>
 	</button>
 </header>

@@ -1,14 +1,24 @@
+<script>
+	import { DateTime } from 'luxon';
+</script>
+
 <footer>
 	<div>
-		<div class="social">
-			<div>Connect on Social</div>
-			<div>
-				<i class="fa-brands fa-x-twitter"></i>
-				<i class="fa-brands fa-linkedin"></i>
-				<i class="fa-brands fa-github"></i>
-			</div>
+		<div class="left-text">
+			Copyright <i class="fa-solid fa-copyright"></i>
+			{DateTime.now().toFormat('yyyy')}
 		</div>
-		<div class="visitor-info"></div>
+		<div class="social">
+			<a href="https://github.com/vinayvikram">
+				<i class="fa-brands fa-github"></i>
+			</a>
+			<a href="https://linkedin.com/in/vinayvikram">
+				<i class="fa-brands fa-linkedin"></i>
+			</a>
+			<a href="https://twitter.com/vinayandvikram">
+				<i class="fa-brands fa-twitter"></i>
+			</a>
+		</div>
 	</div>
 	<div class="bottom-text">Developed by <span>Vinay Vikram</span></div>
 </footer>
@@ -22,6 +32,20 @@
 		flex-direction: column;
 	}
 
+	footer > div {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 2rem;
+	}
+
+	.left-text {
+		display: flex;
+		font-size: 1rem;
+		gap: 10px;
+		align-items: center;
+	}
+
 	.social {
 		display: flex;
 		gap: 20px;
@@ -29,9 +53,8 @@
 		padding: 2rem;
 	}
 
-	.social > div {
-		display: flex;
-		gap: 10px;
+	.social > a {
+		all: unset;
 	}
 
 	.bottom-text {
