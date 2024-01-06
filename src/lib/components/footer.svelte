@@ -9,13 +9,13 @@
 			{DateTime.now().toFormat('yyyy')}
 		</div>
 		<div class="social">
-			<a href="https://github.com/vinayvikram">
+			<a href="https://github.com/vinayvikram" aria-label="Github profile link">
 				<i class="fa-brands fa-github"></i>
 			</a>
-			<a href="https://linkedin.com/in/vinayvikram">
+			<a href="https://linkedin.com/in/vinayvikram" aria-label="Linkedin profile link">
 				<i class="fa-brands fa-linkedin"></i>
 			</a>
-			<a href="https://twitter.com/vinayandvikram">
+			<a href="https://twitter.com/vinayandvikram" aria-label="Twitter profile link">
 				<i class="fa-brands fa-twitter"></i>
 			</a>
 		</div>
