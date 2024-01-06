@@ -2,7 +2,6 @@
 	"name": "vinayvikram.github.io",
 	"version": "0.0.1",
 	"private": true,
-	"homepage": "vinayvikram.github.io",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -12,7 +11,7 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
 		"predeploy": "yarn build",
-		"deploy": "gh-pages -d build"
+		"deploy": "gh-pages -d build --cname vinayvikram.com"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
