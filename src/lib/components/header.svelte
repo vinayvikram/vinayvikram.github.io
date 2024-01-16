@@ -45,7 +45,7 @@
 		</li>
 	</ul>
 
-	<button class="theme-toggle-button" on:click={toggleTheme}>
+	<button class="theme-toggle-button" on:click={toggleTheme} aria-label="toggle theme">
 		<i class={`fa-solid ${theme === 'DARK' ? 'fa-moon' : 'fa-sun'}`}></i>
 	</button>
 
