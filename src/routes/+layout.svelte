@@ -6,14 +6,24 @@
 
 	let scrollContainer: HTMLDivElement;
 
+	let theme: 'LIGHT' | 'DARK' = 'LIGHT';
+
+	const toggleTheme = () => {
+		if (theme === 'LIGHT') {
+			theme = 'DARK';
+		} else {
+			theme = 'LIGHT';
+		}
+	};
+
 	// scroll to top on navaigation
 	$: if ($navigating && scrollContainer) {
 		scrollContainer.scrollTo(0, 0);
 	}
 </script>
 
-<div class="scroll-container" bind:this={scrollContainer}>
-	<Header />
+<div class={`scroll-container ${theme.toLocaleLowerCase()}`} bind:this={scrollContainer}>
+	<Header {theme} {toggleTheme} />
 	<main>
 		<slot />
 	</main>
@@ -29,11 +39,12 @@
 		overflow-y: auto;
 		display: flex;
 		flex-direction: column;
+		color: var(--text-color);
 	}
 
 	main {
 		flex: 1;
-		background: linear-gradient(#f5f4f2, #a1acce);
+		background: linear-gradient(var(--bg-gradient-start-color), var(--bg-gradient-end-color));
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 	}

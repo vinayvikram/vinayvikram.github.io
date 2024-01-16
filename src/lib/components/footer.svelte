@@ -26,8 +26,8 @@
 <style>
 	footer {
 		width: 100%;
-		background-color: #383862;
-		color: #f5f4f2;
+		background-color: var(--footer-bg-color);
+		color: var(--footer-text-color);
 		display: flex;
 		flex-direction: column;
 	}
@@ -62,19 +62,19 @@
 		display: flex;
 		justify-content: center;
 		gap: 10px;
-		border-top: 1px solid white;
+		border-top: 1px solid var(--footer-text-color);
 		font-size: 1.25rem;
 		padding: 5px;
 	}
 
 	.bottom-text > span {
 		font-family: 'Irish Grover';
-		color: #da693f;
-		-webkit-text-stroke: 0.5px black;
+		color: var(--logo-color);
+		-webkit-text-stroke: 0.5px var(--footer-text-color);
 		cursor: pointer;
 	}
 
 	.bottom-text > span:hover {
-		text-shadow: 1px 1px 0.5px black;
+		text-shadow: 1px 1px 0.5px var(--footer-text-color);
 	}
 </style>

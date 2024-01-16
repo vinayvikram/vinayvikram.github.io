@@ -121,12 +121,12 @@
 		width: 1rem;
 		height: 1rem;
 		border-radius: 0.5rem;
-		background-color: #383862;
+		background-color: var(--section-label-bg-color);
 	}
 
 	.experience button {
 		all: unset;
-		color: #383862;
+		color: var(--section-label-bg-color);
 		cursor: pointer;
 		width: fit-content;
 		font-style: italic;

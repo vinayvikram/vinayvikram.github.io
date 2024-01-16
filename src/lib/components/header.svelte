@@ -2,6 +2,9 @@
 	import { goto } from '$app/navigation';
 	import { navigating } from '$app/stores';
 
+	export let theme: 'LIGHT' | 'DARK';
+	export let toggleTheme: () => void;
+
 	let isMenuHidden: boolean = true;
 
 	const toggleMenu = () => {
@@ -41,6 +44,11 @@
 			</a>
 		</li>
 	</ul>
+
+	<button class="theme-toggle-button" on:click={toggleTheme}>
+		<i class={`fa-solid ${theme === 'DARK' ? 'fa-moon' : 'fa-sun'}`}></i>
+	</button>
+
 	<button class="download-resume-button">
 		<a href="/resume.pdf" download="Resume-Vinay-Vikram.pdf">
 			<i class="fa-solid fa-download"></i>
@@ -65,28 +73,28 @@
 		z-index: 10;
 		display: flex;
 		flex-direction: column;
-		box-shadow: 2px 2px 2px #a1acce;
+		box-shadow: 2px 2px 2px var(--bg-gradient-end-color);
 		overflow: hidden;
-		background-color: #f5f4f2;
+		background-color: var(--bg-gradient-start-color);
 	}
 	.full-logo {
 		all: unset;
 		width: fit-content;
 		font-family: 'Irish Grover';
-		color: #da693f;
+		color: var(--logo-color);
 		font-size: 2rem;
-		-webkit-text-stroke: 1px black;
+		/* -webkit-text-stroke: 1px var(--text-color); */
 		cursor: pointer;
 		padding: 0 1.25rem;
 	}
 
 	.full-logo::first-letter {
 		font-size: 4rem;
-		text-shadow: 1px 1px 0.5px black;
+		text-shadow: 1px 1px 0.5px var(--text-color);
 	}
 
 	.full-logo:hover {
-		text-shadow: 1px 1px 0.5px black;
+		text-shadow: 1px 1px 0.5px var(--text-color);
 	}
 
 	.menu-hidden {
@@ -118,16 +126,27 @@
 	}
 
 	.nav-bar > li:hover {
-		background-color: #a1acce;
+		background-color: var(--nav-hover-bg-color);
+		color: var(--nav-hover-color);
 		border-radius: 4px;
+	}
+
+	.theme-toggle-button {
+		all: unset;
+		font-size: 2rem;
+		padding: auto;
+		position: absolute;
+		right: calc(20px + 2rem + 10px);
+		top: 20px;
+		cursor: pointer;
 	}
 
 	.download-resume-button {
 		all: unset;
 		width: fit-content;
 		font-size: 1.25rem;
-		color: #f5f4f2;
-		background-color: #386238;
+		color: var(--download-text-color);
+		background-color: var(--download-bg-color);
 		border-radius: 8px;
 		padding: 8px 16px;
 		cursor: pointer;
@@ -139,7 +158,7 @@
 	}
 
 	.download-resume-button:hover {
-		box-shadow: 2px 2px 1px #a1acce;
+		box-shadow: 2px 2px 1px var(--button-hover-bg-color);
 	}
 
 	.menu-button {
@@ -163,10 +182,15 @@
 	@media only screen and (min-width: 1024px) {
 		header.menu-hidden,
 		header.menu-visible {
-			height: fit-content;
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: center;
+		}
+
+		.theme-toggle-button {
+			all: unset;
+			font-size: 2rem;
+			cursor: pointer;
 		}
 		.menu-button {
 			display: none;

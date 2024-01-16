@@ -9,9 +9,9 @@
 <style>
 	.section-label {
 		all: unset;
-		background-color: #383862;
+		background-color: var(--section-label-bg-color);
 		font-size: 2rem;
-		color: white;
+		color: var(--section-label-text-color);
 		width: fit-content;
 		padding: 8px 16px;
 		border-radius: 0 8px 8px 0;
