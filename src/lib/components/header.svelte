@@ -86,6 +86,7 @@
 		/* -webkit-text-stroke: 1px var(--text-color); */
 		cursor: pointer;
 		padding: 0 1.25rem;
+		user-select: none;
 	}
 
 	.full-logo::first-letter {
@@ -133,8 +134,8 @@
 
 	.theme-toggle-button {
 		all: unset;
-		font-size: 2rem;
-		padding: auto;
+		padding: 0.25rem;
+		font-size: 1.5rem;
 		position: absolute;
 		right: calc(20px + 2rem + 10px);
 		top: 20px;
@@ -188,9 +189,7 @@
 		}
 
 		.theme-toggle-button {
-			all: unset;
-			font-size: 2rem;
-			cursor: pointer;
+			position: unset;
 		}
 		.menu-button {
 			display: none;

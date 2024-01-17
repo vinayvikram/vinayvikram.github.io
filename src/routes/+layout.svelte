@@ -3,6 +3,8 @@
 	import Header from '$lib/components/header.svelte';
 	import Footer from '$lib/components/footer.svelte';
 	import { navigating } from '$app/stores';
+	import { browser } from '$app/environment';
+	import { onMount } from 'svelte';
 
 	let scrollContainer: HTMLDivElement;
 
@@ -15,6 +17,14 @@
 			theme = 'LIGHT';
 		}
 	};
+
+	onMount(() => {
+		if (browser && window.matchMedia('(prefers-color-scheme:dark)').matches) {
+			theme = 'DARK';
+		} else {
+			theme = 'LIGHT';
+		}
+	});
 
 	// scroll to top on navaigation
 	$: if ($navigating && scrollContainer) {
