@@ -70,7 +70,7 @@
 	.bottom-text > span {
 		font-family: 'Irish Grover';
 		color: var(--logo-color);
-		-webkit-text-stroke: 0.5px var(--footer-text-color);
+		-webkit-text-stroke: 0.5px var(--footer-logo-stroke-color);
 		cursor: pointer;
 	}
 

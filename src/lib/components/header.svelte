@@ -83,7 +83,7 @@
 		font-family: 'Irish Grover';
 		color: var(--logo-color);
 		font-size: 2rem;
-		/* -webkit-text-stroke: 1px var(--text-color); */
+		-webkit-text-stroke: 1px var(--logo-stroke-color);
 		cursor: pointer;
 		padding: 0 1.25rem;
 		user-select: none;
@@ -140,6 +140,14 @@
 		right: calc(20px + 2rem + 10px);
 		top: 20px;
 		cursor: pointer;
+		width: 1.5rem;
+		text-align: center;
+	}
+
+	.theme-toggle-button:hover {
+		background-color: var(--nav-hover-bg-color);
+		color: var(--nav-hover-color);
+		border-radius: 4px;
 	}
 
 	.download-resume-button {
