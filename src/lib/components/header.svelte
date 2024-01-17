@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { navigating } from '$app/stores';
+	import { navigating, page } from '$app/stores';
 
 	export let theme: 'LIGHT' | 'DARK';
 	export let toggleTheme: () => void;
@@ -19,25 +19,25 @@
 	<h1 class="full-logo" on:click={() => goto('/')}>Vinay Vikram</h1>
 
 	<ul class="nav-bar">
-		<li>
+		<li class={$page.url.pathname === '/' ? 'active' : ''}>
 			<a href="/">
 				<i class="fa-solid fa-house"></i>
 				Home
 			</a>
 		</li>
-		<li>
+		<li class={$page.url.pathname === '/about-me' ? 'active' : ''}>
 			<a href="/about-me">
 				<i class="fa-solid fa-user"></i>
 				About me
 			</a>
 		</li>
-		<li>
+		<li class={$page.url.pathname === '/projects' ? 'active' : ''}>
 			<a href="/projects">
 				<i class="fa-solid fa-briefcase"></i>
 				Projects
 			</a>
 		</li>
-		<li>
+		<li class={$page.url.pathname === '/contact-me' ? 'active' : ''}>
 			<a href="/contact-me">
 				<i class="fa-solid fa-envelope"></i>
 				Contact me
@@ -126,7 +126,8 @@
 		padding: 8px 16px;
 	}
 
-	.nav-bar > li:hover {
+	.nav-bar > li:hover,
+	.nav-bar > li.active {
 		background-color: var(--nav-hover-bg-color);
 		color: var(--nav-hover-color);
 		border-radius: 4px;
