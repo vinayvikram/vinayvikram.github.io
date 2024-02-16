@@ -5,6 +5,7 @@
 	import { navigating } from '$app/stores';
 	import { browser } from '$app/environment';
 	import { onMount } from 'svelte';
+	import '../app.css';
 
 	let scrollContainer: HTMLDivElement;
 
