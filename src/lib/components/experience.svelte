@@ -6,12 +6,26 @@
 
 	const experiences = [
 		{
+			position: 'Software Engineer',
+			company: 'Wald AI',
+			location: 'Bangalore',
+			employment_type: 'Full-Time',
+			joining_date: '2024-08-15',
+			contributions: [
+				'Added dashboard for admin in the chat application',
+				'Added RAG support in the chat application',
+				'Added llm agent support in the chat application',
+				'Working on interface for one api exposed for other developers.'
+			]
+			
+		},
+		{
 			position: 'Frontend Developer',
 			company: 'KAOS',
 			location: 'Bangalore',
 			employment_type: 'Full-Time',
 			joining_date: '2022-03-21',
-			leaving_date: null,
+			leaving_date: '2024-08-14',
 			contributions: [
 				'Worked on frontend for a Cloud-based application used for tv program scheduling with customers across different parts of world.',
 				'Developed UI for many interesting features for the application, ensuring its successful implementation and functionality.',
