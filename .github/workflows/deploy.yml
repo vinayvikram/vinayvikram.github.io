@@ -37,11 +37,18 @@ jobs:
     permissions:
       pages: write
 
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}  # Verify if this is correct
-
     steps:
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: yarn install  # Install dependencies again for deployment
+
+      - name: Deploy to GitHub Pages using gh-pages
+        run: |
+          yarn add gh-pages  # Install gh-pages package
+          yarn run deploy   # Run the deploy script
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # GitHub token for deployment
+
+    # Ensure `GH_TOKEN` is added to your GitHub secrets if it doesn't exist already.
