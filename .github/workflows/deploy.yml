@@ -11,31 +11,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # If you're using pnpm, add this step then change the commands and cache key below to use `pnpm`
-      # - name: Install pnpm
-      #   uses: pnpm/action-setup@v3
-      #   with:
-      #     version: 8
-
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
- node-version: 20
- cache: npm
+          node-version: 20
+          cache: npm  # This will cache the yarn dependencies too.
 
       - name: Install dependencies
-        run: yarn install
+        run: yarn install  # Using yarn instead of pnpm
 
-      - name: build
+      - name: Build
         env:
- BASE_PATH: '/${{ github.event.repository.name }}'
-        run: yarn run build
+          BASE_PATH: '/${{ github.event.repository.name }}'
+        run: yarn run build  # Running the build with yarn
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
- # this should match the `pages` option in your adapter-static options
- path: 'build/'
+          path: 'build/'  # Ensure 'build/' is correct. Change if necessary.
 
   deploy:
     needs: build_site
@@ -43,11 +36,10 @@ jobs:
 
     permissions:
       pages: write
-      id-token: write
 
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}  # Verify if this is correct
 
     steps:
       - name: Deploy
