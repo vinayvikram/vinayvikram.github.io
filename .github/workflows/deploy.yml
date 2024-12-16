@@ -44,8 +44,12 @@ jobs:
       - name: Set up Git
         run: |
           git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"  # Default email for GitHub Actions
-
+          git config --global user.email "actions@github.com"
+          
+      - name: Set up authentication for GitHub Pages
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git
+          
       - name: Install dependencies
         run: yarn install
 
@@ -54,4 +58,4 @@ jobs:
           yarn add gh-pages
           yarn run deploy
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Make sure to set the GitHub token in your secrets
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Ensure the GitHub token is stored as a secret
