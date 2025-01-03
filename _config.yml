@@ -1,0 +1,17 @@
+title: Vinay Vikram
+email: vinayandvikram@gmail.com
+description: >-
+  This is my personal portfolio where I share my experiences and projects. Feel free to reach out to me if you have any questions or just want to say hi!
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://vinayvikram.com"
+twitter_username: vinayandvikram
+github_username:  vinayvikram
+linkedin_username: vinayvikram
+
+# Build settings
+theme: minima
+
+titles_from_headings:
+  enabled:     true
+  strip_title: true
+  collections: true 

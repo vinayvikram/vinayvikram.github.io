@@ -1,0 +1,38 @@
+- designation: Software Engineer
+  company: Wald AI
+  company_linkedin_page: https://www.linkedin.com/company/waldai
+  job_type: Full-Time
+  location: Bangalore, India 
+  start_date: August 2024
+  end_date: present
+  work_details:
+    - Working on an AI based chat application…
+    - Integrated LLM agent in the chat, which can search web, generate files and generate graphs inside the chat interface.
+    - Integrated RAG in the chat, which helps user to upload different documents and chat within the context of the documents.
+    - Fixed major bugs / improvements in the application like sanitization and reinsertion, highligting of code inside chat etc.
+    - Developed dashboard for admin to manage and track usage of the application inside their organisation.
+  
+- designation: Frontend Developer
+  company: KAOS
+  company_linkedin_page: https://www.linkedin.com/company/kaos/
+  job_type: Internship
+  location: Bangalore, India
+  start_date: April 2022
+  end_date: August 2024
+  work_details:
+    - Worked on frontend for a Cloud-based application used for tv program scheduling with customers across different parts of world.
+    - Developed UI for many interesting features for the application, ensuring its successful implementation and functionality.
+    - Contributed to the development and maintenance of the design system library, ensuring consistency and efficiency in UI components across the application.
+    - Added unit tests for existing and new features, which helps in tracking possible bugs during development of new features.
+    - Fixed various production bugs for existing features which improved the overall reliability and security of the application.
+
+- designation: Software Engineer
+  company: Roxiler Systems
+  company_linkedin_page: https://www.linkedin.com/company/roxiler-systems/
+  job_type: Internship
+  location: Pune, India
+  start_date: January 2022
+  end_date: April 2022
+  work_details:
+    - Worked on a social media application for senior citizens, which has different features like creating and reading posts, adding and following friends etc.
+    - Improved the overall performance of the app by fixing some major bugs.

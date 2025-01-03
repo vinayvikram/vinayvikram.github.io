@@ -1,0 +1,39 @@
+---
+---
+
+@import "minima";
+
+a.site-title {
+    all: unset;
+    width: fit-content;
+    font-family: 'Irish Grover';
+    font-size: 3rem;
+    color: #DA693F !important;
+    -webkit-text-stroke: 1px #000000;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+        text-shadow: 1px 1px 0.5px #000000;
+    }
+}
+
+.footer-heading {
+    all: unset;
+    width: fit-content;
+    font-family: 'Irish Grover';
+    font-size: 1.5rem;
+    color: #DA693F !important;
+    -webkit-text-stroke: 0.5px #000000;
+    user-select: none;
+}
+
+@media screen and (max-width: 768px) {
+    a.site-title {
+        font-size: 2rem;
+    }
+}
+
+li > p {
+    margin: 0;
+}
