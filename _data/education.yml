@@ -1,0 +1,32 @@
+# - course: B.Sc in Programming and Data Science
+#   institute: Indian Institute of Technology, Madras
+#   institute_url: https://study.iitm.ac.in
+#   location: Chennai, Tamil Nadu, India
+#   completed: Currently Pursuing...
+
+- course: Diploma in Data Science
+  institute: Indian Institute of Technology, Madras
+  institute_url: https://study.iitm.ac.in
+  location: Chennai, Tamil Nadu, India
+  completed: 2024
+  grade: 9.1 CGPA
+
+- course: Diploma in Programming
+  institute: Indian Institute of Technology, Madras
+  institute_url: https://study.iitm.ac.in
+  location: Chennai, Tamil Nadu, India
+  completed: 2022
+  grade: 9.2 CGPA
+
+- course: Intermediate in Science
+  institute: St. Thoma High School, Dhanbad
+  institute_url: https://stthomastopchanchi.in/
+  location: Dhanbad, Jharkhand, India
+  completed: 2018
+  grade: 82%
+
+# - course: Matriculation
+#   institute: Subhash Public School, Giridih
+#   location: Giridih, Jharkhand, India
+#   completed: 2016
+#   grade: 9.8 CGPA
