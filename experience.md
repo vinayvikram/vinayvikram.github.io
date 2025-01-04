@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Experience
-permalink: /experience/
+permalink: /experience
 ---
 
-{% for experience in site.data.experiences %}
+{% for experience in site.data.experience %}
 ---
 ### {{ experience.designation }} 
 **[{{ experience.company }}]({{ experience.company_linkedin_page }})**  
