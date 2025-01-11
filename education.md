@@ -8,8 +8,8 @@ permalink: /education
 ---
 ### {{ education.course }}
 **[{{ education.institute }}]({{ education.institute_url }})**  
-{{ education.location }}  
-*{{ education.completed }}* |
+*{{ education.location }}*  
+{{ education.completed }} |
 **{{ education.grade }}** 
  
 
