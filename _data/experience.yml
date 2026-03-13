@@ -6,11 +6,14 @@
   start_date: August 2024
   end_date: present
   work_details:
-    - Working on an AI based chat application…
-    - Integrated LLM agent in the chat, which can search web, generate files and generate graphs inside the chat interface.
-    - Integrated RAG in the chat, which helps user to upload different documents and chat within the context of the documents.
-    - Fixed major bugs / improvements in the application like sanitization and reinsertion, highligting of code inside chat etc.
-    - Developed dashboard for admin to manage and track usage of the application inside their organisation.
+  - Working across product and machine learning at an early-stage AI startup, contributing to both fullstack features and AI/ML systems.
+  - Completed an 8-month Data Science apprenticeship (Feb - Oct 2025), working on ML model fine tuning alongside core product responsibilities.
+  - Worked on technical debt of sdk upgrades, improving the overall stability and security of the application.
+  - Built an LLM agent integrated into the chat interface capable of deep research,web search, file generation, and graph rendering.
+  - Implemented RAG pipeline enabling users to upload documents and query within their context.
+  - Worked on the admin dashboard to allow admins to manage and track application usage across organisations.
+  - Integrated code highlighting, sanitization and reinsertion fixes improving chat reliability and UX.
+  - Fixed various production bugs across the application improving stability and security.
   
 - designation: Frontend Developer
   company: KAOS
