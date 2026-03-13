@@ -11,6 +11,4 @@ permalink: /education
 {{ education.location }}  
 *{{ education.completed }}* |
 **{{ education.grade }}** 
- 
-
 {% endfor %}
